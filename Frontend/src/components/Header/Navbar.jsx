@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaShoppingCart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-
+import logo from "../../assets/logo.png"
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [cartCount, setCartCount] = useState(0);
@@ -45,7 +45,9 @@ const Navbar = () => {
               <NavLink to="/" className="flex">
                 <img
                   className="w-36 hover:opacity-90 transition-opacity"
-                  src="https://res.cloudinary.com/dglakn1aw/image/upload/v1742204920/dineview/iptuuz9mo3d3r0ecnsvi.jpg"
+                  src={logo
+                    
+                  }
                   alt="Restaurant Logo"
                 />
               </NavLink>
