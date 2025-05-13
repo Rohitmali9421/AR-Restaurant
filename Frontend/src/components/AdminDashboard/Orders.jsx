@@ -159,7 +159,7 @@ const AdminOrdersPage = () => {
   const handleUpdateOrder = async (orderId) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:8000/api/orders/${orderId}`,
+        `${import.meta.env.VITE_API_URL}/api/orders/${orderId}`,
         editFormData
       );
       
@@ -175,7 +175,7 @@ const AdminOrdersPage = () => {
   const handleDeleteOrder = async (orderId) => {
     if (window.confirm('Are you sure you want to delete this order?')) {
       try {
-        await axios.delete(`http://localhost:8000/api/orders/${orderId}`);
+        await axios.delete(`${import.meta.env.VITE_API_URL}/api/orders/${orderId}`);
         setOrders(orders.filter(order => order._id !== orderId));
       } catch (err) {
         console.error('Error deleting order:', err);
