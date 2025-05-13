@@ -110,7 +110,7 @@ const AdminOrdersPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8000/api/orders');
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/orders`);
         setOrders(data);
         setLoading(false);
       } catch (err) {
