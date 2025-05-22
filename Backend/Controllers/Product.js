@@ -54,7 +54,7 @@ async function handleGetProduct(req, res) {
     )
       .filtering() // Apply filtering (custom function)
       .sorting() // Apply sorting (custom function)
-      .pagination(); // Apply pagination (custom function)
+    //   .pagination(); // Apply pagination (custom function)
 
     const products = await features.query;
 
